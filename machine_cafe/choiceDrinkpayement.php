@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION["choicedDrinks"]) && !empty($_SESSION["choicedDrinks"])) {
+if (isset($_SESSION["choicedDrinks"])) {
     $choicedDrinks = $_SESSION["choicedDrinks"];
     $totalPrice = $_SESSION["totalPrice"];
 
