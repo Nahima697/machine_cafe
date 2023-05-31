@@ -74,4 +74,5 @@ if (isset($_GET["milk"])) {
     $drinks = $milkFiltered;
 }
 
+
 ?>

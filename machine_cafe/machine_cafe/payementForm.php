@@ -1,6 +1,6 @@
 <?php
 session_start();
-unset ($_SESSION["chosenDrinks"]);
+
 if (isset($_POST["selectedDrinks"])) {
     include("data.php");
     $selectedDrinkIds = $_POST["selectedDrinks"];
@@ -16,8 +16,6 @@ if (isset($_POST["selectedDrinks"])) {
         }
     }
 
-
-  
     $_SESSION["totalPrice"] = $totalPrice; 
 
     header("Location: choiceDrinkpayement.php");

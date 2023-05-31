@@ -4,7 +4,6 @@ $title= "Machine à café";
 include('data.php');
 ?>
 <div class="container">
-<?php  echo $_COOKIE;?>
 <form method="GET"class="form" >
     <legend>Choisi le type de boisson</legend>  
       <input type="checkbox" name="type" value="warm" <?php echo (isset ($_GET['type'])? ($_GET['type']==='warm' ? 'checked' : "") : "")?> >
@@ -86,7 +85,7 @@ if (isset($_GET["sugar"])&& isset($_GET["type"]) || (isset($_GET["sugar"]))){
             Sans
         </label>
     </div>
-    <input type="hidden" name="sugar" value="<?php echo isset($_GET['sugar']) ? $_GET['sugar'] : ''; ?>">
+     <input type="hidden" name="sugar" value="<?php echo isset($_GET['sugar']) ? $_GET['sugar'] : ''; ?>">
     <input type="submit" value="Valider">
 </form>
 </div>

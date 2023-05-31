@@ -24,11 +24,10 @@ $title="Welcome"
     </div>
     <div class="coffee-footer"></div>
   </div>
-  <div>
-    <button formaction ="http://localhost/machine_cafe/addfav.php>" value ="<?php echo($_COOKIE['favDrinks']) ?>">Vos boissons favorites</button>
-  </div>
+<?php include ('parts/footer.php');
+?>
+
 <?php include ('parts/header.php');
 include("data.php");
-include ('parts/footer.php');
 ?>
 
