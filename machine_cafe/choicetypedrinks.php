@@ -1,6 +1,6 @@
 <?php
 include('parts/header.php');
-$tile= "Machine à café";
+$title= "Machine à café";
 include('data.php');
 ?>
 <div class="container">
@@ -51,9 +51,9 @@ if (isset($_GET["type"]) ) {
 <?php
 
 // if (isset($_GET["sugar"])) {
-//     function filterDrink($drink)
+//     function filterDrink($drink,$param)
 //     {
-//         return $drink["sugar"] == $_GET["sugar"];
+//         return $drink[$param] == $_GET[$param];
 //     }
 //     $sugarFiltered = array_filter($drinks, "filterDrink");
 //     $drinks = $sugarFiltered;
@@ -91,10 +91,10 @@ if (isset($_GET["sugar"])&& isset($_GET["type"]) || (isset($_GET["sugar"]))){
 </div>
 <?php
 
-if (isset($_GET["milk"]) && isset($_GET["sugar"])) {
+if (isset($_GET["milk"]) && isset($_GET["sugar"]) ) {
     $milkFiltered = [];
     foreach ($drinks as $drink) {
-        if ($drink["milk"] === ($_GET['milk'] === 'true') && $drink["sugar"] === ($_GET['sugar'] === 'true')) {
+        if ($drink["milk"] === ($_GET['milk'] === 'true') && $drink["sugar"] === ($_GET['sugar'] === 'true') ) {
             $milkFiltered[] = $drink;
         }
     }

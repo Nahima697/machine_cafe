@@ -1,5 +1,6 @@
 <?php
-include("choicetypedrinks.php");
+include("choicetypedrinks2.php");
+$title= "Machine à café";
 ?>
 
 <div>

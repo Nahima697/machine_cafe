@@ -8,10 +8,10 @@ if (isset($_POST["selectedDrinks"])) {
 
     foreach ($drinks as $drink) {
         if (in_array($drink["id"], $selectedDrinkIds)) {
-            if (!isset($_SESSION["choicedDrinks"])) {
-                $_SESSION["choicedDrinks"] = []; 
+            if (!isset($_SESSION["chosenDrinks"])) {
+                $_SESSION["chosenDrinks"] = []; 
             }
-            $_SESSION["choicedDrinks"][] = $drink;
+            $_SESSION["chosenDrinks"][] = $drink;
             $totalPrice += $drink['price']; 
         }
     }
